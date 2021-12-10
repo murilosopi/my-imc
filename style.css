@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+p {
+    margin: 5px 0;
+}
+
+body {
+    background-color: #131313;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+section {
+    margin: 40px 0;
+}
+
+
+.header-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 45vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.281), transparent);
+}
+
+.header-page nav {
+    margin-top: 10px;
+}
+
+.header-page a {
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+.logo {
+    font: normal 400 6em 'Unica One', monospace;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    text-shadow: -3px 3px 3px #00000085;
+    margin-bottom: 25px;
+}
+
+.container-cards {
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.title-card {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.card {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 25px;
+    border-radius: 30px 5px;
+}
+
+.card:nth-child(1){
+    background-color: #611DF2;
+}
+
+.card:nth-child(2){
+    background-color: #F2B90C;
+}
+
+.card:nth-child(3) {
+    background-color: #F2226E;
+    flex-grow: 1;
+}
+
+.card::before {
+    content: '';
+    border: 20px black;
+}
+
+.faixa-imc {
+    list-style-type: none;
+}
+
+.container {
+    margin: auto;
+    max-width: 700px;
+}
+
+.footer-page {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), transparent);
+    min-height: 10vh;
+    position: static;
+    bottom: 0;
+    margin-top: 50px;
+}
+
+@media (max-width: 850px) {
+    .card:nth-child(3) {
+        flex-grow: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .container-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
