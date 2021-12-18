@@ -15,7 +15,7 @@
 }
 
 .card {
-    margin-bottom: 25px;
+    margin: 0 10px 25px 10px;
     display: flex;
     flex-direction: column;
     width: 300px;
