@@ -20,7 +20,7 @@ body {
 }
 
 section {
-    margin: 40px 0;
+    padding: 30px;
 }
 
 
@@ -29,7 +29,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 45vh;
+    min-height: 40vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.281), transparent);
 }
 
@@ -38,7 +38,7 @@ section {
 }
 
 .header-page a {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 20px;
 }
 
@@ -50,20 +50,25 @@ section {
     text-align: center;
     font-size: 2em;
     font-weight: 900;
+    line-height: 1.2em;
     text-shadow: -3px 3px 3px #00000085;
     margin-bottom: 25px;
 }
 
-.faixa-imc {
+.hide-order {
     list-style-type: none;
 }
 
 .container {
     margin: auto;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .footer-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     text-align: center;
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), transparent);
@@ -73,15 +78,68 @@ section {
     margin-top: 50px;
 }
 
-@media (max-width: 850px) {
+
+#form-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: #131313;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-form {
+    border: none;
+    font-weight: bold;
+    width: 200px;
+    line-height: 35px;
+    color: #131313;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .5s;
+}
+
+.btn-gray {
+    --main-btn-color: rgb(225, 225, 225);
+    background: var(--main-btn-color);
+}
+
+
+.btn-green {
+    --main-btn-color: rgb(0, 255, 179);
+    background-color: var(--main-btn-color);
+    background: linear-gradient(100deg, rgba(0,198,139,1) 0%, rgba(115,255,206,1) 40%, rgb(93 253 210) 60%, rgba(32,242,198,1) 90%);
+}
+
+.btn-gray:hover, .btn-green:hover{
+    color: white;
+    outline: 4px solid var(--main-btn-color);
+    background: none;
+}
+
+@media (max-width: 768px) {
     .card:nth-child(3) {
         flex-grow: 0;
     }
 }
 
-@media (max-width: 700px) {
-    .container-cards {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 425px) {
+    .header-page nav a {
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-page {
+        font-size: 0.9em;
     }
 }
