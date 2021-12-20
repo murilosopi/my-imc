@@ -21,7 +21,7 @@ function getFormData() {
 function calcImc(altura, peso) {
     hideRes()
     let imc = peso / ((altura/100)**2)
-    showRes(imc)
+    showRes(imc.toFixed(2))
     resetForm()
 }
 
