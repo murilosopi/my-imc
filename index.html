@@ -61,7 +61,7 @@
                 <h2 class="title">Calcule seu IMC</h2>
                 <p>Para calcular seu IMC é muito simples! Basta preencher os campos abaixo:</p>
 
-                <form id="form-data">
+                <div id="form-data">
                     <label for="txtalt">
                         Altura (em CM)
                     </label>
@@ -71,15 +71,18 @@
                     </label>
                     <input type="number" id="txtpeso">
                     <div class="btn-area">
-                        <button type="submit" class="btn-form btn-green">Calcular</button>
-                        <button type="reset" class="btn-form btn-gray">Limpar</button>
+                        <button type="submit" class="btn-form btn-green" onclick="getFormData()">Calcular</button>
+                        <button type="reset" class="btn-form btn-gray" onclick="resetForm(), hideRes()">Limpar</button>
                     </div>
-                </form>
+                </div>
+                <div id="res" class="res-box"></div>
             </div>
         </section>
     </main>
     <footer class="footer-page">
         <p>Criado por <a href="https://github.com/murilosopi">Murilo Sopi</a></p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
