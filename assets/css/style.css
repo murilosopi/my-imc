@@ -105,6 +105,7 @@ input {
     border-radius: 10px;
     padding: 5px;
     transition: .5s;
+    cursor: pointer;
 }
 
 .btn-gray {
@@ -120,9 +121,21 @@ input {
 }
 
 .btn-gray:hover, .btn-green:hover{
-    color: white;
+    color: whitesmoke;
     outline: 4px solid var(--main-btn-color);
     background: none;
+}
+
+.res-box {
+    margin: auto;
+    margin-top: 15px;
+    display: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: whitesmoke;
+    color: #131313;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
