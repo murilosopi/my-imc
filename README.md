@@ -4,7 +4,7 @@
 
 ### This is a basic web page project about the mean BMI (Body Mass Index) with:
 + Infomations about the BMI
-+ And a simple calculator
++ And a simple calculator that use the user height and weight
 
 ## Technologies Used:
 
