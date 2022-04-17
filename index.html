@@ -13,19 +13,19 @@
 </head>
 <body>
     <header class="header-page">
-        <h1 class="logo">my-IMC</h1>
+        <h1 class="logo" translate="no">my-IMC</h1>
         <aside>A sua calculadora de IMC mais eficiente!</aside>
         <nav>
             <a href="#learn">Sobre o IMC</a>
             <a href="#calc">Calcule o seu IMC</a>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <section id="learn">
-            <h2 class="title">Aprenda sobre o IMC</h2>
-            <div class="container-cards">
-                <div class="card">
-                    <h3 class="title-card">O que é IMC</h3>
+            <h2 class="section-title">Aprenda sobre o IMC</h2>
+            <div class="wrapper-card">
+                <div class="card-box">
+                    <h3 class="title">O que é IMC</h3>
                     <p>
                         O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal.
                     </p>
@@ -33,8 +33,8 @@
                         Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).
                     </p>
                 </div>
-                <div class="card">
-                    <h3 class="title-card">Importância</h3>
+                <div class="card-box">
+                    <h3 class="card">Importância</h3>
                     <p>
                         Estar dentro do peso certo é importante porque estar acima ou abaixo desse peso pode influenciar bastante a saúde, aumentando o risco de doenças como desnutrição quando se está abaixo do peso, e AVC ou infarto, quando se está acima do peso.
                     </p>
@@ -42,10 +42,10 @@
                         Assim, é comum os médicos, enfermeiros e nutricionistas avaliem o IMC da pessoa nas consultas de rotina para verificar a possibilidade de doenças que a pessoa pode estar pre-disposta.
                     </p>
                 </div>
-                <div class="card">
+                <div class="card-box">
                     <h3 class="title-card">Faixas de IMC</h3>
                     <p>Cada faixa de IMC indica uma questão do peso da pessoa. Veja:</p>
-                    <ol class="hide-order">
+                    <ol class="no-order">
                         <li>Menor do que 18,5 – Peso abaixo do normal.</li>
                         <li>De 18,5 a 24,4 – Peso considerado normal pela Organização Mundial de Saúde.</li>
                         <li>Entre 24,5 e 29,9 – Peso em pré-obesidade ou acima do peso, o que já pode representar um risco considerável para a saúde.</li>
@@ -57,30 +57,29 @@
             </div>
         </section>
         <section id="calc">
-            <div class="container">
-                <h2 class="title">Calcule seu IMC</h2>
+            <h2 class="section-title">Calcule seu IMC</h2>
                 <p>Para calcular seu IMC é muito simples! Basta preencher os campos abaixo:</p>
 
-                <div id="form-data">
-                    <label for="txtalt">
+                <form id="form-imc">
+                    <label for="height">
                         Altura (em CM)
                     </label>
-                    <input type="number" id="txtalt">
-                    <label for="txtpeso">
+                    <input class="form-input" type="number" id="height">
+                    <label for="weight">
                         Peso (em KG)
                     </label>
-                    <input type="number" id="txtpeso">
+                    <input class="form-input" type="number" id="weight">
                     <div class="btn-area">
-                        <button type="submit" class="btn-form btn-green" onclick="getFormData()">Calcular</button>
-                        <button type="reset" class="btn-form btn-gray" onclick="resetForm(), hideRes()">Limpar</button>
+                        <button type="submit" class="btn-form -green">Calcular</button>
+                        <button type="reset" class="btn-form -gray" onclick="hideRes()">Limpar</button>
                     </div>
-                </div>
-                <div id="res" class="res-box"></div>
-            </div>
+                </form>
+
+                <div id="result" class="result-box"></div>
         </section>
     </main>
     <footer class="footer-page">
-        <p>Criado por <a href="https://github.com/murilosopi">Murilo Sopi</a></p>
+        Criado por <a href="https://github.com/murilosopi" rel="author" target="_blank">Murilo Sopi</a>
     </footer>
 
     <script src="assets/js/script.js"></script>
