@@ -1,0 +1,31 @@
+.main-button {
+  border: none;
+  font-weight: bold;
+  width: 200px;
+  line-height: 35px;
+  color: #131313;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  transition: .65s;
+  cursor: pointer;
+}
+
+.main-button.-gray {
+  --main-btn-color: rgb(225, 225, 225);
+  background: var(--main-btn-color);
+}
+
+
+.main-button.-green {
+  --main-btn-color: rgb(0, 255, 179);
+  background-color: var(--main-btn-color);
+  background: linear-gradient(100deg, rgba(0,198,139,1) 0%, rgba(115,255,206,1) 40%, rgb(93 253 210) 60%, rgba(32,242,198,1) 90%);
+}
+
+
+:is(.main-button.-green, .main-button.-gray):hover{
+  color: whitesmoke;
+  outline: 4px solid var(--main-btn-color);
+  background: none;
+}

@@ -1,0 +1,11 @@
+.result-box {
+  display: none;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+  background-color: whitesmoke;
+  color: #131313;
+  padding: 30px;
+  border-radius: 10px;
+}

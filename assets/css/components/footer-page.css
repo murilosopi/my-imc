@@ -1,0 +1,30 @@
+.footer-page {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), transparent);
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+
+.footer-page .content {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.footer-page .content a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-page::before {
+  content: '';
+  position: relative;
+  bottom: 3.5vh;
+  height: 1px;
+  width: 80%;
+  max-width: 800px;
+  background-color: rgba(226, 226, 226, 0.06);
+  box-shadow: 0px 1px 2px 0px rgba(82, 82, 82, 0.212);
+}

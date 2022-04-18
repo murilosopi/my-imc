@@ -11,6 +11,7 @@
 
 p {
     margin: 5px 0;
+    font-size: 1.15em;
 }
 
 body {
@@ -23,78 +24,13 @@ section {
     padding: 30px;
 }
 
-
-.header-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 40vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.281), transparent);
-}
-
-.header-page nav {
-    margin-top: 10px;
-}
-
-.header-page a {
-    font-size: 1.2em;
-    margin: 20px;
-}
-
-.logo {
-    font: normal 400 6em 'Unica One', monospace;
-}
-
-.title {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 900;
-    line-height: 1.2em;
-    text-shadow: -3px 3px 3px #00000085;
-    margin-bottom: 25px;
-}
-
-.hide-order {
-    list-style-type: none;
-}
-
-.container {
-    margin: auto;
-    max-width: 800px;
-}
-
-.footer-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    text-align: center;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1), transparent);
-    min-height: 10vh;
-    position: static;
-    bottom: 0;
-    margin-top: 50px;
-}
-
-
-#form-data {
-    display: flex;
-    flex-direction: column;
-}
-
-.btn-area {
-    display: flex;
-    justify-content: center;
-}
-
 input {
     color: #131313;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 5px;
     border: none;
+    transition: .3s;
+    font-size: 1.1em;
 }
 
 input:focus {
@@ -103,64 +39,15 @@ input:focus {
     border: none;
 }
 
-.btn-form {
-    border: none;
-    font-weight: bold;
-    width: 200px;
-    line-height: 35px;
-    color: #131313;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 5px;
-    transition: .5s;
-    cursor: pointer;
+.logo {
+    font: normal 400 6em 'Unica One', monospace;
 }
 
-.btn-gray {
-    --main-btn-color: rgb(225, 225, 225);
-    background: var(--main-btn-color);
+.no-order {
+    list-style-type: none;
 }
 
-
-.btn-green {
-    --main-btn-color: rgb(0, 255, 179);
-    background-color: var(--main-btn-color);
-    background: linear-gradient(100deg, rgba(0,198,139,1) 0%, rgba(115,255,206,1) 40%, rgb(93 253 210) 60%, rgba(32,242,198,1) 90%);
-}
-
-.btn-gray:hover, .btn-green:hover{
-    color: whitesmoke;
-    outline: 4px solid var(--main-btn-color);
-    background: none;
-}
-
-.res-box {
+.container {
     margin: auto;
-    margin-top: 15px;
-    display: none;
-    font-size: 1.3em;
-    font-weight: bold;
-    background-color: whitesmoke;
-    color: #131313;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .card:nth-child(3) {
-        flex-grow: 0;
-    }
-}
-
-@media (max-width: 425px) {
-    .header-page nav a {
-        text-align: center;
-        display: block;
-    }
-}
-
-@media (max-width: 375px) {
-    .header-page {
-        font-size: 0.9em;
-    }
+    max-width: 800px;
 }

@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .card-box.-grow {
+      flex-grow: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-page nav a {
+      text-align: center;
+      display: block;
+  }
+}
