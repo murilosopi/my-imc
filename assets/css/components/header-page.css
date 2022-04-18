@@ -11,9 +11,13 @@
   margin-top: 10px;
 }
 
-.header-page a {
+.header-page nav a {
   font-size: 1.2em;
   margin: 20px;
   font-weight: bold;
   text-decoration: none;
+}
+
+.header-page nav a:hover {
+  text-decoration: underline wavy;
 }

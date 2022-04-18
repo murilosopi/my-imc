@@ -18,6 +18,10 @@
   text-decoration: none;
 }
 
+.footer-page .content a:hover {
+  text-decoration: underline wavy;
+}
+
 .footer-page::before {
   content: '';
   position: relative;
