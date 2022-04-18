@@ -5,6 +5,7 @@ const form = document.querySelector('#form-imc')
 
 
 form.addEventListener('submit', e => {
+    e.preventDefault();
     getFormData(heightInput.value, weightInput.value)
 })
 
