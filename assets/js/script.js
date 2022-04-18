@@ -1,56 +1,57 @@
-const res = document.querySelector('#res')    
-const inputAlt = document.querySelector('#txtalt')
-const inputPeso = document.querySelector('#txtpeso')
+const res = document.querySelector('#result')
+const heightInput = document.querySelector('#height')
+const weightInput = document.querySelector('#weight')
+const form = document.querySelector('#form-imc')
 
-function getFormData() {
 
-    if (inputAlt.value.length == 0 || inputPeso.value.length == 0) {
+form.addEventListener('submit', e => {
+    getFormData(heightInput.value, weightInput.value)
+})
+
+function getFormData(h, w) {
+    if (h.length == 0 || w.length == 0) {
         alert('[ERRO] Por favor, preencha os campos corretamente.')
         hideRes()
-    } else if(inputAlt.value < 1 || inputPeso.value < 1) {
-        alert('[ERRO] Por favor, preencha os campos com dados válidos')
-        hideRes()
-    } else {        
-        let valueAlt = Number(inputAlt.value)
-        let valuePeso = Number(inputPeso.value)
-        
-        calcImc(valueAlt, valuePeso)
-    }
-}
+    } else {
+        let height = Number(h)
+        let weight = Number(w)
 
-function calcImc(altura, peso) {
+        if(height < 1 || weight < 1) {
+            alert('[ERRO] Por favor, preencha os campos com dados válidos')
+            hideRes()
+        } else {     
+            calcImc(height, weight)
+        }
+    }
+} 
+function calcImc(height, weight) {
     hideRes()
-    let imc = peso / ((altura/100)**2)
+    let imc = weight / ((height/100)**2)
     showRes(imc.toFixed(2))
-    resetForm()
+    form.reset();
 }
 
 function showRes(imc) {
     res.style.display = "block"
-    res.innerHTML = `Você tem um IMC de ${imc}`
+    res.textContent = `Você tem um IMC de ${imc}`
 
     if(imc < 17) {
-        res.innerHTML += `, ou seja, está gravemenete abaixo do peso indicado.`
+        res.textContent += `, ou seja, está gravemenete abaixo do peso indicado.`
     } else if (imc >= 17 && imc < 18.5) {
-        res.innerHTML += `, ou seja, está abaixo do peso normal.`
+        res.textContent += `, ou seja, está abaixo do peso normal.`
     } else if (imc >= 18.5 && imc < 24.5) {
-        res.innerHTML += `, ou seja, está na faixa de peso considerada saudável pela OMS.`
+        res.textContent += `, ou seja, está na faixa de peso considerada saudável pela OMS.`
     } else if (imc >= 24.5 && imc < 30) {
-        res.innerHTML += `, ou seja, está acima do peso indicado, com potencial risco à sua saúde.`
+        res.textContent += `, ou seja, está acima do peso indicado, com potencial risco à sua saúde.`
     } else if (imc >= 30 && imc < 35) {
-        res.innerHTML += `, ou seja, está na faixa da obesidade de grau I`
+        res.textContent += `, ou seja, está na faixa da obesidade de grau I`
     } else if (imc >= 35 && imc < 40) {
-        res.innerHTML += `, ou seja, está na faixa da obesidade de grau II`
+        res.textContent += `, ou seja, está na faixa da obesidade de grau II`
     } else if (imc > 40) {
-        res.innerHTML += `, ou seja, está na faixa da obesidade de grau III`
+        res.textContent += `, ou seja, está na faixa da obesidade de grau III`
     }
 }
 
 function hideRes() {
     res.style.display = "none"
-}
-
-function resetForm() {
-    inputAlt.value = null
-    inputPeso.value = null
 }
