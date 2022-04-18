@@ -16,7 +16,7 @@
 
 <hr>
 
-## Como funciona?
+## How it works?
 1. The `height` and `weight` data are recovered at variables, after the form `submit` event.
 2. Then this variables are tested at functions that brings dynamically  feedbacks to the user, according to its values. Here are the functions created in `script.js` and what they do:
 ```js
